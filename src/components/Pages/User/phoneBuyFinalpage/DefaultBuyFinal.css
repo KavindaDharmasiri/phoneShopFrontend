@@ -1,0 +1,20 @@
+.header {
+    background-color: #333;
+    background-color: purple !important;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.phone-details {
+    margin-top: 20px;
+}
+
+.phone-image {
+    width: 100%;
+    max-height: 300px;
+}
+
+.phone-info {
+    margin-top: 20px;
+}
