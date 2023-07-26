@@ -107,7 +107,16 @@ class DefaultRegister extends Component {
 
             this.state.formData.id = this.state.newId;
 
-            saveUser()
+            let res = await GetService.getUserByName(this.state.formData.name);
+
+            if(res.data.length == 0) {
+                saveUser()
+            }else{
+                setTimeout(()=> {
+                    message.error('user name exist!!')
+                },2000);
+
+            }
 
         };
 

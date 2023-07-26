@@ -103,7 +103,7 @@ class RejectOrder extends Component {
                 key: 'image1',
                 render: (imageURL) => (
                     <img
-                        src={require('D:/nnshop/New folder/mobile-phone-shop/src/assets/img/upload' + imageURL)}
+                        src={require('D:/nnshop/New folder/mobile-phone-shop/src/assets/img/upload/' + imageURL)}
                         alt="Product"
                         style={{ width: 100, height: 'auto' }}
                     />

@@ -178,6 +178,30 @@ class GetService {
         }
     };
 
+    getUserByName = async (name) => {
+        const token = localStorage.getItem("token");
+        if (!token) {
+            // Handle the case when the token is missing
+            return Promise.reject("No token found");
+        }
+
+        const config = {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + token,
+            },
+        };
+
+        try {
+            const response = await axios.get('user/getByName?name='+name);
+            return response.data;
+        } catch (error) {
+            // Handle the error appropriately (e.g., logging, error message, etc.)
+            console.error('Error fetching all users:', error);
+            throw error; // Propagate the error to the calling function
+        }
+    };
+
     getOnePhone = async (data) => {
 
         const token = localStorage.getItem("token");
